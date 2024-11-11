@@ -149,7 +149,7 @@ class BinarySearchTree{
 
 
     public void printPostOrderIterative(Node node){
-        if(root == null){
+        if(node == null){
             return;
         }
         Stack<Node> st1 = new Stack<>();
@@ -177,7 +177,7 @@ class BinarySearchTree{
             return;
         }
         Stack<Node> st = new Stack<>();
-        st.push(root);
+        st.push(node);
         while(!st.isEmpty()){
             Node tmp = st.peek();
             System.out.print(tmp.value + " ");
@@ -191,11 +191,11 @@ class BinarySearchTree{
             }
         }
     }
-    public void printInOrderIterative(){
-        if(root == null){
+    public void printInOrderIterative(Node node){
+        if(node == null){
             return;
         }
-        Node tmp = root;
+        Node tmp = node;
         Stack<Node> st = new Stack<>();
         while(tmp != null || st.size() > 0){
             while(tmp != null){
